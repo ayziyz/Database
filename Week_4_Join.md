@@ -4,7 +4,7 @@
 
 ### Question 1
 Select country.name as "country name", airport.name as "airport name" 
-from country join airport on country.id = airport.id where country.name = "Finland";
+from country join airport on country.iso_country = airport.iso_country where country.name = "Finland";
 
 ![screenshot](/Screenshots/Join_1.png)
 
@@ -20,8 +20,7 @@ inner join country on airport.iso_country = country.iso_country;
 ![screenshot](/Screenshots/Join_3.png)
 
 ### Question 4
-select airport.name, screen_name from airport left join game on ident = location where airport.name = "%Hels%";
-
+select airport.name, screen_name from airport left join game on ident = location where airport.name like "%Hels%";
 ![screenshot](/Screenshots/Join_4.png)
 
 ### Question 5
